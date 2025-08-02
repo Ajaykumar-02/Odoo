@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuickDesk - Profile</title>
+  <style>
+    /* Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-btn {
+      padding: 8px 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dashboard-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .role-tag {
+      background-color: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    #upgrade-btn {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #upgrade-btn:hover {
+      background-color: #e68a00;
+    }
+
+    .upgrade-success {
+      color: green;
+      font-weight: bold;
+      display: none;
+      margin-top: 10px;
+    }
+
+    .profile-image {
+      margin-top: 20px;
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      background-color: #ddd;
+      background-image: url("https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="top-bar">
+        <a href="data_dashboard.html"><button class="dashboard-btn">Dashboard</button></a>
+        <a href="community.html"><button class="role-tag">Admin</button></a> 
+      </div>
+      <div class="profile-image"> </div>
+
+      <h2>Profile</h2>
+
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" placeholder="Ajay Kumar" />
+      </div>
+
+      <div class="form-group">
+        <label>Role:</label>
+        <select id="role-select">
+          <option value="End User">End User</option>
+          <option value="Support Agent">Support Agent</option>
+          <option value="Admin">Admin</option>
+        </select>
+        <button id="upgrade-btn" onclick="showUpgradeMessage()">Upgrade</button>
+        <p id="upgrade-msg" class="upgrade-success">✅ Successfully Upgraded!</p>
+      </div>
+
+      <div class="form-group">
+        <label>Category in Interest:</label>
+        <input type="text" placeholder="e.g. AI, UX Design" />
+      </div>
+
+      <div class="form-group">
+        <label>Change Language:</label>
+        <select>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>French</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showUpgradeMessage() {
+      document.getElementById("upgrade-msg").style.display = "block";
+    }
+  </script>
+</body>
+</html>
