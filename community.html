@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Dashboard</title>
+  <!-- Link your CSS here -->
+  <style>
+    /* Include this inline CSS if you don’t want separate style.css */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .topbar {
+      background: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .top-left .admin-btn {
+      margin-right: 10px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .top-left .admin-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .filter-bar {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .dropdown {
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .search-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .search-box {
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .ask-btn {
+      padding: 8px 16px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .ask-btn:hover {
+      background-color: #218838;
+    }
+
+    .post-list {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .post {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .vote-box {
+      text-align: center;
+      margin-right: 20px;
+      font-weight: bold;
+      color: #555;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .post-content {
+      flex-grow: 1;
+    }
+
+    .post-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .tags {
+      font-size: 14px;
+      color: gray;
+      margin: 4px 0;
+    }
+
+    .posted-by {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .status-box {
+      text-align: center;
+    }
+
+    .status-tag {
+      background-color: #ffc107;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .comment-count {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .pagination span {
+      margin: 0 5px;
+      padding: 6px 10px;
+      background: #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pagination span:hover {
+      background: #bbb;
+    }
+    .post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="top-left">
+        <a href="data_dashboard.html"><button class="admin-btn">Dashboard</button></a>
+       <a href="admin.html"><button class="admin-btn">Admin</button></a> 
+      </div>
+    </div>
+
+    <!-- Filter Options -->
+    <div class="filter-bar">
+      <select class="dropdown">
+        <option>Categories</option>
+      </select>
+      <select class="dropdown">
+        <option>Status</option>
+      </select>
+      <label><input type="radio" name="sort"> Most Comment</label>
+      <label><input type="radio" name="sort"> Most Upvote</label>
+    </div>
+
+    <!-- Search and Ask Section -->
+    <div class="search-section">
+      <input class="search-box" type="text" placeholder="Search...">
+      <a href="ask.html" class="ask-btn">Ask</a>
+    </div>
+
+   <!-- Posts Section -->
+<div class="post-list">
+
+  <!-- Post 1 -->
+  <a href="Ques.html" class="post-link">
+    <div class="post">
+      <div class="vote-box">1</div>
+      <div class="post-content">
+        <p class="post-title">Is it good to use AI in hackathons?</p>
+        <p class="tags">Technical | AI</p>
+        <p class="posted-by">Posted by odoo IN pvt. ltd.</p>
+      </div>
+      <div class="status-box">
+        <div class="status-tag">Open</div>
+        <div class="comment-count">21</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Post 2 -->
+  <a href="Ques.html" class="post-link">
+    <div class="post">
+      <div class="vote-box">2</div>
+      <div class="post-content">
+        <p class="post-title">Best Python frameworks for web development?</p>
+        <p class="tags">Programming | Python</p>
+        <p class="posted-by">Posted by CodeMaster Inc.</p>
+      </div>
+      <div class="status-box">
+        <div class="status-tag">Open</div>
+        <div class="comment-count">12</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Post 3 -->
+  <a href="Ques.html" class="post-link">
+    <div class="post">
+      <div class="vote-box">3</div>
+      <div class="post-content">
+        <p class="post-title">What are the benefits of using version control?</p>
+        <p class="tags">DevOps | Git</p>
+        <p class="posted-by">Posted by DevTech</p>
+      </div>
+      <div class="status-box">
+        <div class="status-tag">Open</div>
+        <div class="comment-count">7</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Post 4 -->
+  <a href="Ques.html" class="post-link">
+    <div class="post">
+      <div class="vote-box">4</div>
+      <div class="post-content">
+        <p class="post-title">Difference between SQL and NoSQL databases?</p>
+        <p class="tags">Database | SQL</p>
+        <p class="posted-by">Posted by DataSage</p>
+      </div>
+      <div class="status-box">
+        <div class="status-tag">Open</div>
+        <div class="comment-count">9</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Post 5 -->
+  <a href="Ques.html" class="post-link">
+    <div class="post">
+      <div class="vote-box">5</div>
+      <div class="post-content">
+        <p class="post-title">How to prepare for coding interviews in 2025?</p>
+        <p class="tags">Placement | DSA</p>
+        <p class="posted-by">Posted by InterviewPrep Pro</p>
+      </div>
+      <div class="status-box">
+        <div class="status-tag">Open</div>
+        <div class="comment-count">33</div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+    </div>
+
+   
+
+  </div>
+</body>
+</html>
