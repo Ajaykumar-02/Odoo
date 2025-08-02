@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Question UI</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      border: 2px solid #000;
+      border-radius: 30px;
+      width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+      position: relative;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .button {
+      padding: 6px 12px;
+      border: 2px solid #000;
+      border-radius: 15px;
+      background-color: #ffcfd2;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dashboard {
+      background-color: #fff;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background-color: #d0eaff;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .user-post {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .post-content {
+      margin: 10px 0;
+    }
+
+    .answer-box {
+      background-color: #dff2fc;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .reply-btn {
+      margin-top: 10px;
+      padding: 4px 10px;
+      border-radius: 10px;
+      border: 2px dashed #000;
+      background-color: #fff0f0;
+      font-size: 13px;
+      display: inline-block;
+    }
+
+    .reply-btn.admin-only {
+      position: absolute;
+      left: -160px;
+      top: 200px;
+      font-size: 13px;
+      color: #222;
+    }
+
+    .share-btn {
+      position: absolute;
+      right: 30px;
+      top: 140px;
+      background-color: #fff399;
+      padding: 5px 8px;
+      border-radius: 10px;
+      border: 2px solid #000;
+      cursor: pointer;
+    }
+
+    .note {
+      position: absolute;
+      left: -280px;
+      top: 240px;
+      font-size: 12px;
+      color: #555;
+      font-style: italic;
+    }
+
+    .arrow {
+      position: absolute;
+      width: 150px;
+      height: 2px;
+      border-bottom: 2px solid black;
+      transform: rotate(-15deg);
+      left: -120px;
+      top: 170px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div>
+        <a href="community.html"><button class="button dashboard">DashBoard</button></a>
+      </div>
+      <div>
+       <a href="login.html"><button class="button">Login</button></a>
+      </div>
+    </div>
+
+    <h2>Is it good things to use AI for hackathon?
+      <span class="tag">Development</span>
+    </h2>
+
+    <div class="user-post
